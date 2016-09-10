@@ -1,0 +1,40 @@
+/******** 
+author: Dhivyalekha P               
+Computer science engineer 
+linkedin profile:  https://in.linkedin.com/in/dhivyalekha-p-28369737 
+url: dhivyalekha.blogspot.in
+flying jet in c program with graphics library
+*******/
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void main()
+{
+int gd=DETECT,gm,i,j=0;
+initgraph(&gd,&gm,"");
+settextstyle(DEFAULT_FONT,HORIZ_DIR,2);
+outtextxy(210,20,"flying jet");
+setviewport(0,0,639,440,1);
+for(i=0;i<=300;i=i+10,j++)
+{
+line(10+i,100,20+i,100);
+line(20+i,100,30+i,110);
+line(30+i,110,56+i,110);
+line(56+i,110,40+i,100);
+line(40+i,100,50+i,100);
+line(50+i,100,68+i,110);
+line(68+i,110,92+i,110);
+line(10+i,100,30+i,120);
+line(30+i,120,130+i,120);
+line(92+i,110,100+i,110);
+line(100+i,110,115+i,115);
+line(115+i,115,130+i,120);
+setcolor(j);
+delay(200);
+if(i==300)
+break;
+clearviewport();
+}
+getch();
+closegraph();
+}
